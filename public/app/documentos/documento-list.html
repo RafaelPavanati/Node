@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <div style="text-align: center">
+            <h3 style="color: #3e515b; text-align: center ;padding-top: 3%;padding-bottom: 3%">Documentos</h3>
+        </div>
+    </div>
+    <list-filter service="vm.service" cols="vm.cols" parans="vm.parans">
+        <button ui-sref="DocumentoForm({id:null})" type="button"
+                class="btn btn-outline-success">Novo Documento
+        </button>
+        <actions>
+            <div class="btn-group">
+            </div>
+<!--            ui-sref="CarrosForm({id: $parent.item._id})"-->
+            <div class="btn-group">
+                <a href="#" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button ui-sref="CarrosForm({id: $parent.item.carro})" type="button"
+                            class="btn btn-outline-primary">Veiculo
+                    </button>
+                </a>
+                <a href="#" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button ui-sref="DocumentoForm({id: $parent.item._id})" type="button"
+                            class="btn btn-outline-warning">Editar
+                    </button>
+                </a>
+            </div>
+        </actions>
+    </list-filter>
+</div>

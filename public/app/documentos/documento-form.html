@@ -1,0 +1,47 @@
+<div class="col-md-12 mx-auto mt-4">
+    <h2>Novo Documento</h2>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label> Carro: </label>
+                <select
+                        class="form-control"
+                        ng-model="vm.documento.carro"
+                        ng-options="item as item.modelo for item in vm.carros track by item._id">
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label>Situação:</label>
+                <select class="form-control form-control-sm" ng-model="vm.documento.pago">
+                    <option value="true">Pago</option>
+                    <option value="false">Devento</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label>Exercicio:</label>
+                <input ng-model="vm.documento.exercicio" type="number" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label>Valor:</label>
+                <input ng-model="vm.documento.valor" type="number" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <button ng-click="vm.save(vm.documento)" type="button" class="btn btn-primary">Salvar</button>
+            </div>
+            <div class="form-group">
+                <button ui-sref="DocumentoList" type="button" class="btn btn-danger">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+<div class="col-md-12 mx-auto mt-4">
+    <h2>Novo Carro</h2>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label>Marca:</label>
+                <input ng-model="vm.carro.marca" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Modelo:</label>
+                <input ng-model="vm.carro.modelo" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-2">
+                <label>Cor:</label>
+                <input ng-model="vm.carro.cor" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-2">
+                <label>Ano:</label>
+                <input ng-model="vm.carro.ano" type="number" class="form-control">
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>Kilometros rodados:</label>
+                <input ng-model="vm.carro.km" type="number" class="form-control">
+            </div>
+            <div class="form-group col-md-2">
+                <label>Valor:</label>
+                <input ng-model="vm.carro.valor" type="number" class="form-control">
+            </div>
+            <div class="form-group col-md-2">
+                <label>Placa:</label>
+                <input ng-model="vm.carro.placa" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <button ng-click="vm.save(vm.carro)" type="button" class="btn btn-primary">Salvar</button>
+            </div>
+            <div class="form-group">
+                <button ui-sref="CarrosList" type="button" class="btn btn-danger">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>
