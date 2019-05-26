@@ -14,7 +14,11 @@ function CarrosFormController(CarrosService, $stateParams, $state) {
         CarrosService.findOne($stateParams.id)
             .then(function (data) {
                 vm.carro = data;
-            });
+            }).catch(function (data) {
+            alert('Carro já removido da garagem!')
+            $state.go('DocumentoList');
+
+        });
     }
 
 

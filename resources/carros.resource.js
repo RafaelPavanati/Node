@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const clienteModel = mongoose.model('carros');
+const docModel = mongoose.model('documentos');
 
 module.exports = function (app) {
     app.get('/carros', function (req, resp) {
